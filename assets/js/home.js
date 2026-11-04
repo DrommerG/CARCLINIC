@@ -19,9 +19,6 @@
       scrollTrigger: { trigger: gate, start: 'top top', end: 'bottom bottom', scrub: true },
     })
       .fromTo('.gate__door', { clipPath: 'inset(0% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 100% 0%)', duration: 1 }, 0)
-      .fromTo('.gate__edge', { y: 0 }, { y: () => -window.innerHeight, duration: 1 }, 0)
-      .fromTo('.gate__edge', { opacity: 0 }, { opacity: 1, duration: 0.05 }, 0)
-      .fromTo('.gate__slats', { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0)
       .to('.gate__cue', { opacity: 0, duration: 0.06 }, 0)
       .to({}, { duration: 0.22 });
   }
