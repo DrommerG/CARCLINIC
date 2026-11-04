@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reservas | CAR CLINIC</title>
+<meta name="description" content="Reserva tu visita a CAR CLINIC.">
+<meta name="theme-color" content="#001427">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="preload" href="assets/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site-header site-header--solid">
+  <a class="brand" href="index.html"><img src="assets/img/logo-sm.webp" width="520" height="97" alt="CAR CLINIC, inicio"></a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span><span></span></button>
+  <nav class="site-nav" id="menu" aria-label="Principal">
+    <ul>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="promociones.html">Promociones</a></li>
+      <li><a href="reservas.html" class="nav-cta" aria-current="page">Reservas</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="contenido">
+<section class="book">
+  <div class="book__media">
+    <img src="assets/img/reservas.webp" width="1152" height="1440" alt="Auto plateado con reflejos de luz en el taller">
+    <h1 class="display"><span class="mask"><span data-rise>Reservas</span></span></h1>
+  </div>
+  <form class="book__form" data-book>
+    <p class="book__intro">Cuéntanos qué necesita tu auto y elige cuándo quieres venir.</p>
+    <div class="field"><label for="nombre">Nombre</label><input id="nombre" name="nombre" autocomplete="name" required></div>
+    <div class="field"><label for="telefono">Teléfono</label><input id="telefono" name="telefono" type="tel" autocomplete="tel" required></div>
+    <div class="field field--wide"><label for="correo">Correo</label><input id="correo" name="correo" type="email" autocomplete="email"></div>
+    <div class="field field--wide"><label for="vehiculo">Marca y modelo del vehículo</label><input id="vehiculo" name="vehiculo" required></div>
+    <div class="field field--wide">
+      <label for="servicio">Servicio o producto</label>
+      <select id="servicio" name="servicio" required>
+        <option value="">Elige una opción</option>
+            <optgroup label="Detailing y lavado">
+              <option>Lavado ejecutivo</option>
+              <option>Lavado completo</option>
+              <option>Lavado premium</option>
+              <option>Detailing ejecutivo</option>
+              <option>Detailing completo</option>
+            </optgroup>
+            <optgroup label="Protección integral">
+              <option>Protección PPF</option>
+              <option>Tratamiento cerámico</option>
+            </optgroup>
+            <optgroup label="Tapicería automotriz">
+              <option>Forros Slimfit</option>
+              <option>Tapicería de volantes</option>
+              <option>Tapizado de cielo o termoformado</option>
+              <option>Moqueteado y alfombrado de piso</option>
+              <option>Tapizado de capuchones y pomos</option>
+              <option>Tapizado de puertas</option>
+              <option>Tapizado de tablero</option>
+            </optgroup>
+            <optgroup label="Productos">
+              <option>Accesorios off road 4x4</option>
+              <option>Láminas de seguridad</option>
+              <option>Llantas y aros</option>
+            </optgroup>
+      </select>
+    </div>
+    <div class="field"><label for="fecha">Fecha</label><input id="fecha" name="fecha" type="date" required></div>
+    <div class="field">
+      <label for="horario">Horario</label>
+      <select id="horario" name="horario" required>
+        <option value="">Elige una opción</option>
+        <option>Mañana</option>
+        <option>Tarde</option>
+      </select>
+    </div>
+    <div class="field field--wide"><label for="comentarios">Comentarios</label><textarea id="comentarios" name="comentarios"></textarea></div>
+    <div class="book__actions">
+      <button class="btn" type="submit">Reservar</button>
+      <p class="book__status" data-status role="status"></p>
+    </div>
+  </form>
+</section>
+<section class="ticker" aria-label="Lo que ofrecemos">
+  <svg class="ticker__road" viewBox="0 0 1440 400" preserveAspectRatio="none" aria-hidden="true"><path d="M360 -10 C 520 60, 640 110, 900 120 C 1120 128, 1180 150, 1460 330"/></svg>
+  <div class="ticker__row" data-ticker data-speed="46"><div class="ticker__track"><div class="ticker__group"><span class="t-thin">Protección</span><span class="t-bold">PPF</span><span class="t-thin">Tratamiento</span><span class="t-bold">Cerámico</span><span class="t-thin">Lavado</span><span class="t-bold">Premium</span><span class="t-thin">Detailing</span><span class="t-bold">Completo</span></div></div></div>
+  <div class="ticker__row" data-ticker="rev" data-speed="54"><div class="ticker__track"><div class="ticker__group"><span class="t-thin">Láminas de</span><span class="t-bold">Seguridad</span><span class="t-thin">Tapicería</span><span class="t-bold">A medida</span><span class="t-thin">Forros</span><span class="t-bold">Slimfit</span><span class="t-thin">Volantes</span><span class="t-bold">En cuero</span></div></div></div>
+  <div class="ticker__row" data-ticker data-speed="50"><div class="ticker__track"><div class="ticker__group"><span class="t-thin">Accesorios</span><span class="t-bold">Off road 4x4</span><span class="t-thin">Llantas y</span><span class="t-bold">Aros</span><span class="t-thin">Suspensión</span><span class="t-bold">Para camionetas</span><span class="t-thin">Roll bar y</span><span class="t-bold">Estribos</span></div></div></div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="site-footer__top">
+    <a class="site-footer__logo" href="index.html"><img src="assets/img/logo.webp" width="1654" height="309" loading="lazy" alt="CAR CLINIC, Estética Automotriz"></a>
+    <div class="site-footer__cols">
+      <div>
+        <h2 class="display">Páginas</h2>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="promociones.html">Promociones</a></li>
+          <li><a href="reservas.html">Reservas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="display">Servicios</h2>
+        <ul>
+          <li><a href="servicios.html#detailing">Detailing y lavado</a></li>
+          <li><a href="servicios.html#proteccion">Protección integral</a></li>
+          <li><a href="servicios.html#tapiceria">Tapicería automotriz</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p class="site-footer__legal mono">© 2026 CAR CLINIC. Estética automotriz.</p>
+</footer>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
