@@ -383,7 +383,7 @@ body.tint-green { --tint: 112, 141, 129; }
 .wipes__stage { position: sticky; top: 0; height: 100svh; overflow: hidden; }
 .wipes__head { position: absolute; z-index: 1; left: var(--gutter); top: calc(var(--header-h) + clamp(1.5rem, 5vh, 3rem)); width: calc(50% - 2 * var(--gutter)); }
 .wipes__head h2 { font-size: clamp(3rem, 6.5vw, 7.5rem); color: var(--coral); }
-.wipes__index { margin-top: 1.25rem; }
+.wipes__index { margin-top: 1.25rem; font-size: clamp(1rem, 1.15vw, 1.1875rem); font-weight: 500; }
 .wipes__index li { padding: .15em 0; color: var(--sage); transition: color .25s; }
 .wipes__index li.is-active { color: var(--paper); }
 .wipes__step { position: absolute; inset: 0; }
