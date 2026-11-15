@@ -59,7 +59,7 @@ const buildSidewallText = async () => {
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
   const radius = (1.7 / 1.9) * (size / 2);
-  const word = 'ESTÉTICA AUTOMOTRIZ';
+  const word = 'PERFORMANCE WHEELS';
   const spacing = 0.074;
   [-Math.PI / 2, Math.PI / 2].forEach((center) => {
     [...word].forEach((letter, i) => {

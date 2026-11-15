@@ -14,11 +14,10 @@
     CC.lenis = lenis;
   }
 
-  ScrollTrigger.create({
-    start: 24,
-    end: 'max',
-    toggleClass: { targets: '.site-header', className: 'is-solid' },
-  });
+  const header = document.querySelector('.site-header');
+  const setSolid = () => header.classList.toggle('is-solid', window.scrollY > 24);
+  addEventListener('scroll', setSolid, { passive: true });
+  setSolid();
 
   const toggle = document.querySelector('.nav-toggle');
   const setNav = (open) => {
@@ -136,6 +135,40 @@
         marks.forEach((m) => m.classList.remove('is-active'));
       };
     });
+  }
+
+  const history = document.querySelector('[data-history]');
+  if (history) {
+    const milestones = gsap.utils.toArray('.milestone', history);
+    if (reduce) {
+      milestones.forEach((m) => m.classList.add('is-on'));
+      gsap.set('.history__fill', { scaleY: 1 });
+    } else {
+      const line = history.querySelector('.history__line');
+      gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: { trigger: line, start: 'top 60%', end: 'bottom 60%', scrub: true } })
+        .fromTo('.history__fill', { scaleY: 0 }, { scaleY: 1 }, 0)
+        .fromTo('.history__marker', { y: 0 }, { y: () => line.offsetHeight }, 0);
+      milestones.forEach((m) => {
+        ScrollTrigger.create({
+          trigger: m.querySelector('.milestone__node'),
+          start: 'top 60%',
+          onEnter: () => m.classList.add('is-on'),
+          onLeaveBack: () => m.classList.remove('is-on'),
+        });
+        gsap.fromTo(m.querySelector('.milestone__rings'), { rotation: -40 }, {
+          rotation: 80, ease: 'none',
+          scrollTrigger: { trigger: m, start: 'top bottom', end: 'bottom top', scrub: true },
+        });
+        gsap.from(m.querySelectorAll('.milestone__body > h3, .milestone__body > p'), {
+          y: 36, autoAlpha: 0, duration: 0.9, ease: 'power3.out', stagger: 0.08,
+          scrollTrigger: { trigger: m, start: 'top 78%', once: true },
+        });
+      });
+      gsap.from(history.querySelectorAll('.history__vision, .history__close > *'), {
+        y: 40, autoAlpha: 0, duration: 1, ease: 'power3.out', stagger: 0.1,
+        scrollTrigger: { trigger: '.history__vision', start: 'top 80%', once: true },
+      });
+    }
   }
 
   const form = document.querySelector('[data-book]');
