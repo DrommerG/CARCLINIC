@@ -13,8 +13,7 @@
     video.removeAttribute('autoplay');
     video.pause();
   } else {
-    gsap.from('.gate__shield', { autoAlpha: 0, scale: 0.6, duration: 1, ease: 'back.out(1.7)', delay: 0.15 });
-    gsap.from('.gate__title h1, .gate__phrase', { autoAlpha: 0, y: 26, duration: 1.1, ease: 'power3.out', stagger: 0.18, delay: 0.55 });
+    gsap.from('.gate__title h1, .gate__phrase', { autoAlpha: 0, y: 26, duration: 1.1, ease: 'power3.out', stagger: 0.18, delay: 0.2 });
     gsap.timeline({
       defaults: { ease: 'none' },
       scrollTrigger: { trigger: gate, start: 'top top', end: 'bottom bottom', scrub: true },
