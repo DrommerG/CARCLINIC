@@ -359,7 +359,7 @@ body.tint-green { --tint: 112, 141, 129; }
 }
 
 /* Latonería y pintura */
-.bodyshop { padding: clamp(5rem, 14vh, 10rem) var(--gutter) clamp(3rem, 8vh, 5rem); background: var(--navy); color: var(--paper); }
+.bodyshop { padding: clamp(5rem, 14vh, 10rem) var(--gutter); background: var(--navy); color: var(--paper); }
 .bodyshop__intro { display: grid; grid-template-columns: 5fr 6fr; gap: clamp(2rem, 6vw, 6rem); align-items: center; }
 .bodyshop__copy h2 { margin-bottom: .4em; font-size: clamp(3.25rem, 7.5vw, 8.5rem); color: var(--coral); }
 .bodyshop__copy p { max-width: 32em; font-size: clamp(1.0625rem, 1.3vw, 1.3125rem); line-height: 1.6; }
@@ -401,7 +401,7 @@ body.tint-green { --tint: 112, 141, 129; }
 .wipes__stage { position: sticky; top: 0; height: 100svh; overflow: hidden; }
 .wipes__head { position: absolute; z-index: 1; left: var(--gutter); top: calc(var(--header-h) + clamp(1.5rem, 5vh, 3rem)); width: calc(50% - 2 * var(--gutter)); }
 .wipes__head h2 { font-size: clamp(3rem, 6.5vw, 7.5rem); color: var(--coral); }
-.wipes__index { margin-top: 1.25rem; font-family: var(--display); font-size: clamp(1.125rem, 1.45vw, 1.5rem); letter-spacing: .03em; text-transform: uppercase; }
+.wipes__index { margin-top: 1.25rem; font-family: var(--display); font-size: clamp(1rem, 1.15vw, 1.1875rem); letter-spacing: .03em; text-transform: uppercase; }
 .wipes__index li { padding: .15em 0; color: var(--sage); transition: color .25s; }
 .wipes__index li.is-active { color: var(--paper); }
 .wipes__step { position: absolute; inset: 0; }
