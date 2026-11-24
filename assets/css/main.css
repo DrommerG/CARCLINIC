@@ -418,8 +418,9 @@ body.tint-green { --tint: 112, 141, 129; }
   .wipes__head { position: static; width: auto; margin-bottom: 2rem; }
   .wipes--flip .wipes__step figure { left: auto; right: auto; }
   .wipes__index { display: none; }
-  .wipes__step { position: static; }
-  .wipes__step + .wipes__step { margin-top: 3rem; }
+  .wipes__step { position: static; display: flex; flex-direction: column; }
+  .wipes__step + .wipes__step { margin-top: 3.5rem; }
+  .wipes__step .wipes__text { order: -1; margin: 0 0 1rem; }
   .wipes__step figure { position: static; height: 78vw; }
   .wipes__text { position: static; width: auto; margin-top: 1rem; }
 }
@@ -512,5 +513,7 @@ body.tint-green .page-hero::after { mix-blend-mode: normal; background: linear-g
 .reduce .promo { position: relative; min-height: 100svh; }
 .reduce .reserve { position: relative; min-height: 100svh; visibility: visible; }
 .reduce .wipes__head, .reduce .wipes__step, .reduce .wipes__text { position: static; width: auto; }
+.reduce .wipes__step { display: flex; flex-direction: column; }
+.reduce .wipes__step .wipes__text { order: -1; }
 .reduce .wipes__stage { padding: 6rem var(--gutter); }
 .reduce .wipes__step figure { position: static; height: 70vh; margin-top: 2rem; }

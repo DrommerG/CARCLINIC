@@ -119,14 +119,14 @@
           start: 'top top',
           end: 'bottom bottom',
           scrub: true,
-          onUpdate: (self) => mark(Math.min(steps.length - 1, Math.floor(self.progress * tl.duration() + 0.3))),
+          onUpdate: (self) => mark(Math.min(steps.length - 1, Math.floor(self.progress * tl.duration() + 0.35))),
         },
       });
       figures.slice(1).forEach((fig, i) => {
-        const at = i + 0.35;
-        tl.to(fig, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.65 }, at)
-          .to(texts[i], { autoAlpha: 0, y: -28, duration: 0.2 }, at + 0.1)
-          .to(texts[i + 1], { autoAlpha: 1, y: 0, duration: 0.25 }, at + 0.35);
+        const at = i + 0.45;
+        tl.to(fig, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.45 }, at)
+          .to(texts[i], { autoAlpha: 0, y: -28, duration: 0.15 }, at + 0.08)
+          .to(texts[i + 1], { autoAlpha: 1, y: 0, duration: 0.2 }, at + 0.22);
       });
       tl.to({}, { duration: 0.35 });
 
