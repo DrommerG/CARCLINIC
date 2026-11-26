@@ -14,6 +14,22 @@
     CC.lenis = lenis;
   }
 
+  // Enlaces a una sección (#llantas, #detailing…): el salto del navegador ocurre antes de que termine la carga
+  // y puede quedar corrido, así que al cargar se vuelve a ubicar la sección, salvo que la persona ya se haya movido.
+  const hashTarget = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (hashTarget) {
+    let moved = false;
+    const markMoved = () => { moved = true; };
+    ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach((ev) => addEventListener(ev, markMoved, { once: true, passive: true }));
+    const goTo = () => {
+      if (moved) return;
+      if (CC.lenis) CC.lenis.scrollTo(hashTarget, { immediate: true, force: true });
+      else hashTarget.scrollIntoView();
+    };
+    if (document.readyState === 'complete') requestAnimationFrame(goTo);
+    else addEventListener('load', () => requestAnimationFrame(goTo), { once: true });
+  }
+
   const header = document.querySelector('.site-header');
   const setSolid = () => header.classList.toggle('is-solid', window.scrollY > 24);
   addEventListener('scroll', setSolid, { passive: true });

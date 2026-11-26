@@ -407,6 +407,9 @@ body.tint-green { --tint: 112, 141, 129; }
 .wipes__step { position: absolute; inset: 0; }
 .wipes__step figure { position: absolute; left: 50%; right: 0; top: 0; bottom: 0; }
 .wipes__step img { width: 100%; height: 100%; object-fit: cover; }
+.wipes__step img.focus-top { object-position: 50% 0; }
+/* Fotos con la cabeza pegada al borde: empiezan bajo el encabezado sólido para que no tape la cara. */
+@media (min-width: 901px) { .wipes__step figure.below-header { top: var(--header-h); } }
 .wipes__text { position: absolute; left: var(--gutter); bottom: clamp(2rem, 7vh, 4.5rem); width: calc(50% - 2 * var(--gutter)); }
 .wipes__text h3 { font-size: clamp(1.75rem, min(4.2vw, 6.5svh), 4.75rem); color: var(--coral); }
 .wipes--flip .wipes__step figure { left: 0; right: 50%; }
